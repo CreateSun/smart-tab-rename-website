@@ -1,0 +1,12 @@
+{
+  "name": "tab-rename-landing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler pages dev . --port 8788",
+    "deploy": "npx wrangler pages deploy . --project-name tab-rename"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

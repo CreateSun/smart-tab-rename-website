@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tab Rename — a local-first Chrome extension for naming browser tabs your way." />
+    <meta name="theme-color" content="#101111" />
+    <title>Tab Rename — name every tab your way</title>
+    <link rel="icon" href="assets/icon-128.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header wrap">
+      <a class="brand" href="./" aria-label="Tab Rename home"><img src="assets/icon-128.png" alt="" /> <span>Tab Rename</span></a>
+      <nav aria-label="Primary navigation">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="advanced/" data-i18n="nav.advanced">Advanced</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <button class="language-switch" type="button" aria-label="Switch language"><span>中</span><span>EN</span></button>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <p class="eyebrow" data-i18n="hero.eyebrow">A calmer browser, one tab at a time</p>
+        <h1 data-i18n-html="hero.title">Name every<br /><em>important</em> tab.</h1>
+        <p class="hero-copy" data-i18n="hero.copy">A focused Chrome extension for giving crowded tabs a name that makes sense to you. Local-first. No account. No tracking.</p>
+        <div class="actions">
+          <a class="button button-primary store-link" href="https://chromewebstore.google.com/detail/tab-rename/coejidmnhlldfnlfknmnpcplgfjllpgm" target="_blank" rel="noreferrer" data-i18n="hero.cta">Add to Chrome</a>
+          <a class="button button-quiet" href="#how" data-i18n="hero.secondary">See how it works</a>
+        </div>
+        <p class="microcopy" data-i18n="hero.microcopy">Free · no ads · data stays in your browser</p>
+        <div class="hero-stage reveal">
+          <div class="stage-bar"><span></span><span></span><span></span><b data-i18n="stage.label">your browser, made legible</b></div>
+          <img src="assets/rename-overlay.png" alt="Tab Rename rename overlay on a webpage" data-alt-en="Tab Rename rename overlay on a webpage" data-alt-zh="网页中的 Tab Rename 重命名面板" />
+        </div>
+      </section>
+
+      <section class="statement wrap">
+        <p class="eyebrow" data-i18n="statement.eyebrow">Why Tab Rename</p>
+        <h2 data-i18n-html="statement.title">A useful name is<br />a tiny act of <em>clarity.</em></h2>
+        <p data-i18n="statement.copy">Projects sprawl. Dashboards all look alike. Tabs multiply. Tab Rename lets you replace browser noise with the words you already use to think.</p>
+      </section>
+
+      <section id="vertical-tabs" class="vertical-tabs wrap" aria-labelledby="vertical-tabs-title">
+        <div class="vertical-tabs-intro">
+          <p class="eyebrow" data-i18n="vertical.eyebrow">Made for vertical tab bars</p>
+          <h2 id="vertical-tabs-title" data-i18n-html="vertical.title">When every tab starts<br />the same, context gets <em>lost.</em></h2>
+          <p data-i18n="vertical.copy">Issue trackers, pull-request queues, docs and dashboards often repeat the same title prefix. In a narrow vertical tab bar, the meaningful part is cut off — leaving several open tabs that look identical.</p>
+        </div>
+        <p class="workflow-note" data-i18n="vertical.note">Illustrative workflow · fictitious domains, representative browser state</p>
+        <div class="tab-comparison" role="group" data-i18n-aria="vertical.comparisonLabel" aria-label="Before and after comparison of repeated vertical browser tabs">
+          <figure class="tab-shot tab-shot-before reveal">
+            <div class="comparison-label"><span data-i18n="vertical.before.label">Before</span><small data-i18n="vertical.before.copy">Repeated prefixes hide the difference.</small></div>
+            <img src="assets/pain/vertical-tabs-before.svg" alt="Before: repeated browser tabs in a vertical tab sidebar are hard to tell apart" data-alt-en="Before: repeated browser tabs in a vertical tab sidebar are hard to tell apart" data-alt-zh="重命名前：垂直标签栏中重复前缀的标签难以区分" />
+          </figure>
+          <figure class="tab-shot tab-shot-after reveal">
+            <div class="comparison-label"><span data-i18n="vertical.after.label">After</span><small data-i18n="vertical.after.copy">Rules put the useful signal first.</small></div>
+            <img src="assets/pain/vertical-tabs-after.svg" alt="After: rule-based tab names make repeated tabs easy to identify" data-alt-en="After: rule-based tab names make repeated tabs easy to identify" data-alt-zh="重命名后：基于规则的标签名称让垂直标签栏一眼可辨" />
+          </figure>
+        </div>
+        <div class="vertical-rule">
+          <div>
+            <p class="eyebrow" data-i18n="vertical.rule.eyebrow">One reusable rule</p>
+            <p data-i18n="vertical.rule.copy">Match the changing part of a familiar URL and bring it to the start of the title. The original page title stays there; the distinction arrives first.</p>
+          </div>
+          <div class="pattern-rule" data-i18n-aria="vertical.rule.label" aria-label="Example URL pattern to title rule">
+            <span data-i18n="vertical.rule.url">URL pattern</span>
+            <code>https://tracker.example/issues/{1}</code>
+            <b aria-hidden="true">→</b>
+            <strong>Issue · {1}</strong>
+            <small data-i18n="vertical.rule.title">Title rule</small>
+          </div>
+        </div>
+        <a href="advanced/" class="text-link vertical-link"><span class="text-link-label" data-i18n="vertical.link">Build a rule for your workspace</span><span class="arrow" aria-hidden="true">→</span></a>
+      </section>
+
+      <section id="how" class="workflow wrap">
+        <div class="section-head"><p class="eyebrow" data-i18n="how.eyebrow">Three ways to keep a name</p><h2 data-i18n="how.title">As temporary — or as lasting — as you need.</h2></div>
+        <div class="scope-grid">
+          <article><span class="number">01</span><h3 data-i18n="scope.page.title">This page</h3><p data-i18n="scope.page.copy">Name a page for the moment. Navigate away and it disappears.</p></article>
+          <article><span class="number">02</span><h3 data-i18n="scope.session.title">This tab session</h3><p data-i18n="scope.session.copy">Keep the name across reloads and in-page navigation, until you close the tab.</p></article>
+          <article><span class="number">03</span><h3 data-i18n="scope.rule.title">A permanent rule</h3><p data-i18n="scope.rule.copy">Save a local rule and let Tab Rename apply it every time the right page opens.</p></article>
+        </div>
+      </section>
+
+      <section id="features" class="features wrap">
+        <div class="section-head"><p class="eyebrow" data-i18n="features.eyebrow">Built for the long list</p><h2 data-i18n="features.title">Small controls. Serious order.</h2></div>
+        <div class="feature-layout">
+          <div class="feature-list">
+            <article><span>⌘</span><div><h3 data-i18n="feature.keyboard.title">Keyboard-first</h3><p data-i18n="feature.keyboard.copy">Open it with a shortcut. Enter saves. Escape closes. Nothing gets between you and the tab.</p></div></article>
+            <article><span>↗</span><div><h3 data-i18n="feature.menu.title">Right where you work</h3><p data-i18n="feature.menu.copy">Use the toolbar icon or the page context menu when a name needs changing.</p></div></article>
+            <article><span>◌</span><div><h3 data-i18n="feature.local.title">Private by default</h3><p data-i18n="feature.local.copy">No network requests, telemetry or uploads. Rules and settings stay in Chrome storage on your device.</p></div></article>
+            <article><span>⌕</span><div><h3 data-i18n="feature.rules.title">Rules you can inspect</h3><p data-i18n="feature.rules.copy">Search, edit, pause, export and import every permanent naming rule in one place.</p></div></article>
+          </div>
+          <figure class="browser-card reveal"><img src="assets/rules.png" alt="Tab Rename rules management screen" data-alt-en="Tab Rename rules management screen" data-alt-zh="Tab Rename 规则管理页面" /><figcaption data-i18n="features.caption">Every saved rule is visible, editable and entirely local.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="advanced-teaser wrap">
+        <div><p class="eyebrow" data-i18n="advanced.eyebrow">For repeatable work</p><h2 data-i18n-html="advanced.title">Rules that understand<br />where you <em>are.</em></h2><p data-i18n="advanced.copy">Match one exact URL, a whole domain, or dynamic paths using placeholders and regular expressions. Give recurring work its own visual language.</p><a href="advanced/" class="text-link"><span class="text-link-label" data-i18n="advanced.link">Explore advanced rules</span><span class="arrow" aria-hidden="true">→</span></a></div>
+        <div class="rule-terminal" aria-label="Example URL rule"><span class="terminal-top">RULE / URL PATTERN</span><code>https://linear.app/{1}/issue/{2}</code><span class="arrow">↓</span><strong>Linear · {2}</strong><small data-i18n="advanced.example">Capture the part that matters, keep it in the title.</small></div>
+      </section>
+
+      <section id="faq" class="faq wrap">
+        <div class="section-head"><p class="eyebrow">FAQ</p><h2 data-i18n="faq.title">A few good questions.</h2></div>
+        <div class="faq-list">
+          <details open><summary data-i18n="faq.one.q">Does Tab Rename collect my data?</summary><p data-i18n="faq.one.a">No. Page titles, URLs, rules and settings are processed and stored only in your browser. Tab Rename makes no network requests and has no telemetry.</p></details>
+          <details><summary data-i18n="faq.two.q">Which pages can I rename?</summary><p data-i18n="faq.two.a">Most normal web pages work. Chrome-protected pages such as chrome://, the Chrome Web Store, new-tab pages and other extension pages cannot be modified.</p></details>
+          <details><summary data-i18n="faq.three.q">How are overlapping rules resolved?</summary><p data-i18n="faq.three.a">The priority is exact URL, then URL pattern, then domain. A page-only or tab-session name always takes priority over a saved rule.</p></details>
+          <details><summary data-i18n="faq.four.q">Why does it ask for optional site access?</summary><p data-i18n="faq.four.a">Optional site access lets a permanent rule apply automatically after you navigate. You can deny or revoke it at any time; manual renaming still works.</p></details>
+        </div>
+      </section>
+
+      <section class="final-cta wrap"><p class="eyebrow" data-i18n="final.eyebrow">Make room to think</p><h2 data-i18n-html="final.title">Your tabs already say enough.<br /><em>Make them say the right thing.</em></h2><a class="button button-primary store-link" href="https://chromewebstore.google.com/detail/tab-rename/coejidmnhlldfnlfknmnpcplgfjllpgm" target="_blank" rel="noreferrer" data-i18n="final.cta">Add Tab Rename to Chrome</a></section>
+    </main>
+
+    <footer class="wrap"><a class="brand" href="./"><img src="assets/icon-128.png" alt="" /> <span>Tab Rename</span></a><span data-i18n="footer.note">A quieter way to browse.</span><div><a href="privacy/" data-i18n="footer.privacy">Privacy</a><a href="https://github.com/CreateSun/tab-smart-rename-extension" target="_blank" rel="noreferrer">GitHub</a></div></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
