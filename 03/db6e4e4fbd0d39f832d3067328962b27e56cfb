@@ -1,0 +1,44 @@
+advanced/index.html
+  s_881be8f2d43f65::t_84335edbfc58dc 2,7
+index.html
+  s_750b1fd1e7d5d7::t_1367dd3bbab031 7
+  s_881be8f2d43f65::t_142a83701f69be 2,37,98
+assets/rules-en.svg
+  s_881be8f2d43f65::t_741b1172dcc368 1-13
+app.js
+  s_881be8f2d43f65::t_142a83701f69be 28,37
+privacy/index.html
+  s_881be8f2d43f65::t_84335edbfc58dc 2
+assets/onboarding-en.svg
+  s_881be8f2d43f65::t_741b1172dcc368 1-10
+robots.txt
+  s_750b1fd1e7d5d7::t_e686e8a8c4db38 1-4
+assets/rename-overlay-en.svg
+  s_881be8f2d43f65::t_741b1172dcc368 1-26
+sitemap.xml
+  s_750b1fd1e7d5d7::t_6124c7409eeceb 1-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.45-trip",
+  "base_commit_sha": "03db6e4e4fbd0d39f832d3067328962b27e56cfb",
+  "prompts": {},
+  "sessions": {
+    "s_750b1fd1e7d5d7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bf945a92-9413-492f-a5fc-e120685c9cfd",
+        "model": "deepseek/deepseek-flash"
+      },
+      "human_author": "Codex <codex@openai.com>"
+    },
+    "s_881be8f2d43f65": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0bd54-f9b8-7e32-9cb1-2ec411a9aed4",
+        "model": "gpt-5.6-terra"
+      },
+      "human_author": "Codex <codex@openai.com>"
+    }
+  }
+}
