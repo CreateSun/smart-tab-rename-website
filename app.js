@@ -25,7 +25,7 @@ const copy = {
 };
 
 const stored = localStorage.getItem('tab-rename-language');
-let language = stored || (navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en');
+let language = stored || 'en';
 function render(lang) {
   language = lang;
   const dictionary = copy[lang];
@@ -34,6 +34,7 @@ function render(lang) {
   document.querySelectorAll('[data-i18n-html]').forEach((element) => { const value = dictionary[element.dataset.i18nHtml]; if (value) element.innerHTML = value; });
   document.querySelectorAll('[data-i18n-aria]').forEach((element) => { const value = dictionary[element.dataset.i18nAria]; if (value) element.setAttribute('aria-label', value); });
   document.querySelectorAll('[data-alt-en]').forEach((element) => { element.alt = lang === 'zh' ? element.dataset.altZh : element.dataset.altEn; });
+  document.querySelectorAll('[data-src-en]').forEach((element) => { element.src = lang === 'zh' ? element.dataset.srcZh : element.dataset.srcEn; });
   localStorage.setItem('tab-rename-language', lang);
 }
 document.querySelector('.language-switch')?.addEventListener('click', () => render(language === 'zh' ? 'en' : 'zh'));
