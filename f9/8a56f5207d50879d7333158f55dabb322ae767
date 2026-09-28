@@ -1,0 +1,19 @@
+README.md
+  s_750b1fd1e7d5d7::t_82c95b952ce38f 14-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.45-trip",
+  "base_commit_sha": "f98a56f5207d50879d7333158f55dabb322ae767",
+  "prompts": {},
+  "sessions": {
+    "s_750b1fd1e7d5d7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bf945a92-9413-492f-a5fc-e120685c9cfd",
+        "model": "deepseek/deepseek-flash"
+      },
+      "human_author": "Codex <codex@openai.com>"
+    }
+  }
+}
